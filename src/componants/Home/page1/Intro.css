@@ -1,0 +1,15 @@
+.companys {
+    display: flex;
+    justify-content: space-between;
+}
+
+.microsoft {
+    font-size: 14px;
+}
+
+@media only screen and (max-width:576px) {
+    .companys {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

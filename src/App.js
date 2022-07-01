@@ -6,7 +6,7 @@ import SignUp from './componants/authentication/SignUp/SignUp';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='signin' element={<Signin />}></Route>
