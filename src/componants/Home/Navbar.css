@@ -1,0 +1,32 @@
+.nav-bar {
+    background-color: #050402;
+}
+
+.menu-btn {
+    border: 1px solid white;
+    padding: 2px 3px;
+    color: white;
+}
+
+.menu-list {
+    background-color: #050402;
+    color: white;
+}
+
+.menu li:hover {
+    background-color: white;
+    color: black;
+}
+
+.search-input-text {
+    color: black;
+}
+
+.input-text-search {
+    padding: 0 5px;
+}
+
+.nav-div {
+    display: flex;
+    justify-content: space-between;
+}
