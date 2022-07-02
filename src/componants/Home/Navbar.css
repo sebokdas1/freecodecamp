@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
 .nav-bar {
     background-color: #050402;
 }
 
 .menu-btn {
     border: 1px solid white;
-    padding: 2px 3px;
+    padding: 2px 7px;
     color: white;
+}
+
+.menu-btn a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading {
+    font-family: 'Lato', sans-serif;
 }
 
 .menu-list {
@@ -29,4 +40,17 @@
 .nav-div {
     display: flex;
     justify-content: space-between;
+}
+
+.signin-link {
+    border: 1px solid orange;
+    background-color: rgba(255, 166, 0, 0.959);
+    padding: 4px 12px;
+    color: black;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.signin-link:hover {
+    background-color: rgba(255, 166, 0, 0.815);
 }
