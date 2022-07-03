@@ -1,10 +1,12 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Navbar.css'
-import { FaExternalLinkAlt, FaFreeCodeCamp, FaUser } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
@@ -26,40 +28,42 @@ const Navbar = () => {
         <li className='lg:text-white lg:hidden'>{user ? <button className="btn btn-ghost" onClick={logOut}>Sign Out</button> : <Link to="/signin">Sign in</Link>}</li>
     </>
     return (
-        <div className="navbar nav-bar shadow ">
-            <div className="navbar-start nav-div">
-                <div className="dropdown">
-                    <div className='menu-btn lg:hidden'>
-                        <button>MENU</button>
+        <div>
+            <div className='hidden lg:block'>
+                <div className='free-nav py-2'>
+                    <div><input className='pr-8 pl-2' type="text" placeholder='Search 8,000+ tutorials' /></div>
+                    <div><Link to="/"><img src="https://i.ibb.co/m88vB38/codecamp.jpg" alt="" /></Link></div>
+                    <div className='flex justify-center'>
+                        <div className=''>
+                            <div className="dropdown">
+                                <div className='menu-btn hidden lg:block'>
+                                    <button>MENU</button>
+                                </div>
+                                <ul tabIndex="0" className="menu menu-compact dropdown-content menu-list mt-3 p-1 shadow rounded-box drop-menu">
+                                    {menuItems}
+                                </ul>
+                            </div>
+                        </div>
+                        <div className='signin-div'>
+                            {user ? <span className='text-white ml-5 text-2xl'><FontAwesomeIcon icon={faUser}></FontAwesomeIcon></span> : <Link className='signin-link' to="signin">Sign in</Link>}
+                        </div>
                     </div>
-                    <ul tabIndex="0" className="menu menu-compact dropdown-content menu-list mt-3 p-2 shadow rounded-box w-52">
-                        {menuItems}
-                    </ul>
                 </div>
+            </div>
 
-
-                <div>
-                    <input className='input-text-search hidden lg:block' type="text" name="" id="" placeholder='Search 8,000+ tutorials' />
-                </div>
-
-                <div className='lg:justify-center'>
-                    <Link to="/" className="btn btn-ghost normal-case text-white text-xl"> <span className='flex items-center'>FreeCodeCamp <span className='text-2xl ml-2'><FaFreeCodeCamp /></span></span></Link>
-                </div>
-
-                <div className='hidden lg:block'>
-                    <div className="dropdown">
-                        <div className='menu-btn hidden lg:block'>
+            <div className='block lg:hidden bg-black py-5'>
+                <div className='flex  gap-5'>
+                    <div className="dropdown pl-5">
+                        <div className='menu-btn '>
                             <button>MENU</button>
                         </div>
-                        <ul tabIndex="0" className="menu menu-compact dropdown-content menu-list mt-3 p-2 shadow rounded-box w-72">
+                        <ul tabIndex="0" className="menu menu-compact dropdown-content menu-list mt-3 p-2 shadow rounded-box w-52">
                             {menuItems}
                         </ul>
                     </div>
-                    {user ? <Link className='signin-link' to="/"><FaUser /></Link> : <Link className='signin-link' to="signin">Sign in</Link>}
+                    <div className='mobile-link'><Link to="/"><img src="https://i.ibb.co/m88vB38/codecamp.jpg" alt="" /></Link></div>
                 </div>
-
             </div>
-
         </div>
     );
 };

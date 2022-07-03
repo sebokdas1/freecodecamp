@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
-.nav-bar {
-    background-color: #050402;
-}
 
 .menu-btn {
     border: 1px solid white;
@@ -15,9 +12,7 @@
     justify-content: space-between;
 }
 
-.heading {
-    font-family: 'Lato', sans-serif;
-}
+
 
 .menu-list {
     background-color: #050402;
@@ -33,14 +28,6 @@
     color: black;
 }
 
-.input-text-search {
-    padding: 0 5px;
-}
-
-.nav-div {
-    display: flex;
-    justify-content: space-between;
-}
 
 .signin-link {
     border: 1px solid orange;
@@ -53,4 +40,32 @@
 
 .signin-link:hover {
     background-color: rgba(255, 166, 0, 0.815);
+}
+
+/* ----------- */
+.free-nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.free-nav img {
+    width: 100px;
+}
+
+.signin-div img {
+    width: 20px;
+}
+
+.userIcon {
+    color: white;
+}
+
+.drop-menu {
+    width: 200px;
+}
+
+.mobile-link img {
+    width: 200px;
 }
