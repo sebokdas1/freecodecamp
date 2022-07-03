@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+
+.courses-container {
+    width: 50%;
+
+}
+
+.courses-container h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.courses-container h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.courses-container p {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+}
+
+.course-container {
+    width: 50%;
+}
+
+.course-container div {
+    border: 2px solid black;
+    font-size: 24px;
+    margin-top: 10px;
+}

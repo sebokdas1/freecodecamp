@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Navbar.css'
 import { FaExternalLinkAlt, FaFreeCodeCamp, FaUser } from 'react-icons/fa';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faArrowsUpDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
