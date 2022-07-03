@@ -2,36 +2,43 @@
     {
         "_id": 1,
         "name": "(New) Responsive Web Design Certificatiion",
+        "logo": "https://i.ibb.co/qRt6qLw/responsive-2-removebg-preview.png",
         "duration": 300
     },
     {
         "_id": 2,
         "name": "Lagacy Responsive Web Design Certification",
+        "logo": "https://i.ibb.co/qRt6qLw/responsive-2-removebg-preview.png",
         "duration": 300
     },
     {
         "_id": 3,
         "name": "JavaScript Algorithms and Data Structures Certificaion",
+        "logo": "https://i.ibb.co/FzrxSpV/js.png",
         "duration": 300
     },
     {
         "_id": 4,
         "name": "Front End Development Libraries Certification",
+        "logo": "https://i.ibb.co/JmQrXHm/react-removebg-preview.png",
         "duration": 300
     },
     {
         "_id": 5,
         "name": "Data Visualization Certification",
+        "logo": "https://i.ibb.co/nwJczMh/c3-removebg-preview.png",
         "duration": 300
     },
     {
         "_id": 6,
         "name": "Back End Development And APIs Certification",
+        "logo": "https://i.ibb.co/ZBZLfQW/server.png",
         "duration": 300
     },
     {
         "_id": 7,
         "name": "Quality Assurance Certification",
+        "logo": "https://i.ibb.co/q0vGBrC/notes-removebg-preview.png",
         "duration": 300
     }
 ]

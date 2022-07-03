@@ -5,7 +5,6 @@
 
 .courses-container {
     width: 50%;
-
 }
 
 .courses-container h1 {
@@ -30,10 +29,46 @@
 
 .course-container {
     width: 50%;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .course-container div {
-    border: 2px solid black;
+    height: 72px;
+    background-color: rgba(128, 128, 128, 0.205);
+    align-items: center;
+}
+
+.course-container div {
+    border: 2px solid rgba(0, 0, 0, 0.575);
     font-size: 24px;
     margin-top: 10px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+}
+
+.course-container div:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.course-container img {
+    width: 40px;
+}
+
+@media only screen and (max-width:576px) {
+    .courses-container {
+        width: fit-content;
+    }
+
+    .course-container {
+        width: fit-content;
+    }
+
+    .course-container div {
+        height: 100px;
+    }
+
 }
