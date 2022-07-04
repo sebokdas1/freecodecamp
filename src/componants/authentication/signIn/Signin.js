@@ -44,7 +44,7 @@ const Signin = () => {
     }
 
     if (user || gUser) {
-        navigate(from, { replace: true })
+        navigate('/courses')
     }
     const onSubmit = data => {
         console.log(data)

@@ -33,8 +33,13 @@ const SignUp = () => {
     }
 
     if (error || gError || uError) {
-        errorMassage =
-            <p className='text-red-600'><small>{error?.message || gError?.message || uError?.message}</small></p>
+        if (error?.message === "Firebase: Error (auth/email-already-in-use).") {
+            errorMassage = <p className='text-red-600'><small>user already exist. Please signin</small></p>
+        }
+        else {
+            errorMassage =
+                <p className='text-red-600'><small>{error?.message || gError?.message || uError?.message}</small></p>
+        }
     }
 
     if (token) {

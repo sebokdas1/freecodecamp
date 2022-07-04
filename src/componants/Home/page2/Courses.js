@@ -1,16 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navbar from '../Navbar';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
 import './Courses.css'
+import Loading from '../../shared/Loading';
+import { useQuery } from 'react-query';
 
 const Courses = () => {
-    const [courses, setCourses] = useState([])
-    useEffect(() => {
-        fetch('https://freecodecam-p.herokuapp.com/courses')
-            .then(res => res.json())
-            .then(data => setCourses(data))
-    }, [])
+    const { data: courses, isLoading } = useQuery('courses', () => fetch('https://freecodecam-p.herokuapp.com/courses').then(res => res.json()));
+    if (isLoading) {
+        return <Loading />
+    }
     return (
         <div>
             <Navbar />
